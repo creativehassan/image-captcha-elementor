@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node (if build tools are added later)
+node_modules/
+package-lock.json
+
+# Composer
+vendor/
+composer.lock
+
+# WordPress
+*.log
+wp-config.php
+
+# Build artifacts
+*.zip
+dist/

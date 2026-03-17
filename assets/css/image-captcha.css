@@ -1,0 +1,99 @@
+/*--------------------------------------------------------------
+  Image Captcha – Layout
+--------------------------------------------------------------*/
+.eic-form-control-wrap.eic_captcha {
+	display: block;
+	width: 100%;
+}
+
+.eic-form-control.eic-radio {
+	display: block;
+}
+
+.captcha-image {
+	display: inline-block;
+	text-align: center;
+}
+
+.eic_instructions {
+	display: block;
+	margin-bottom: 10px;
+	color: var(--e-global-color-text, inherit);
+}
+
+.captcha-icon-section {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+/*--------------------------------------------------------------
+  Image Captcha – Question highlight
+--------------------------------------------------------------*/
+.captcha-image .eic_instructions .choosen-icon {
+	color: var(--e-global-color-accent, red);
+	font-weight: 700;
+}
+
+/*--------------------------------------------------------------
+  Image Captcha – Icon labels
+--------------------------------------------------------------*/
+.captcha-image label {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	line-height: 0;
+}
+
+.captcha-image label > input[type="radio"] {
+	opacity: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+  Image Captcha – SVG icons
+--------------------------------------------------------------*/
+.captcha-image svg {
+	width: 50px;
+	height: 50px;
+	display: block;
+	fill: var(--e-global-color-primary, #000);
+}
+
+.captcha-image label > input + svg {
+	border: 2px solid transparent;
+	border-radius: 4px;
+	transition: border-color 0.2s ease, fill 0.2s ease;
+}
+
+/*--------------------------------------------------------------
+  Image Captcha – States (hover, checked, focus)
+--------------------------------------------------------------*/
+.captcha-image label:hover > input + svg {
+	border-color: rgba(0, 0, 0, 0.15);
+}
+
+.captcha-image label > input:checked + svg,
+.captcha-image label > input:focus + svg {
+	border-color: var(--e-global-color-accent, #f00);
+}
+
+.captcha-image label:hover > input:checked + svg,
+.captcha-image label:hover > input:focus + svg {
+	border-color: var(--e-global-color-accent, #f00);
+}
+
+/*--------------------------------------------------------------
+  Image Captcha – Hidden state (reveal on interaction)
+--------------------------------------------------------------*/
+body:not(.elementor-editor-active) .eic-captcha--hidden .eic-form-control.eic-radio {
+	display: none;
+}
