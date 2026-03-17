@@ -3,7 +3,7 @@
 A lightweight, privacy-friendly image captcha field for **Elementor Pro** forms. Users prove they're human by selecting the correct icon — no third-party services, no cookies, no API keys.
 
 ![WordPress](https://img.shields.io/badge/WordPress-5.8%2B-blue?logo=wordpress)
-![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?logo=php&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.0%2B-777BB4?logo=php&logoColor=white)
 ![License](https://img.shields.io/badge/License-GPLv2-green)
 
 ## Features
